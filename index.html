@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Daymark | Daily To-Do List</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="#today" class="brand">
+      <span class="brand-icon">✓</span>
+      <span>Daymark</span>
+    </a>
+
+    <nav>
+      <a href="#today">Today</a>
+      <a href="#app">App</a>
+      <a href="#author">Author</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- TODAY SECTION -->
+    <section class="todo" id="today">
+
+      <p class="eyebrow">✦ YOUR DAILY SPACE</p>
+
+      <h1>Make today count.</h1>
+
+      <p class="subtitle">
+        One task at a time. One step forward.
+      </p>
+      <select id="category" required>
+    <option value="">Select category</option>
+    <option value="fitness">Fitness</option>
+    <option value="study">Study</option>
+    <option value="shopping">Shopping</option>
+    <option value="work">Work</option>
+    <option value="self-care">Self-care</option>
+    <option value="meals">Meals</option>
+</select>
+      <form id="form">
+        <label class="sr-only" for="input">New task</label>
+
+        <input
+          id="input"
+          type="text"
+          placeholder="What needs to be done?"
+          autocomplete="off"
+        />
+
+        <button type="submit">+ Add task</button>
+      </form>
+
+      <ul id="list" class="list"></ul>
+
+      <p class="footer-note">
+        Small steps make meaningful progress.
+      </p>
+
+    </section>
+
+    <!-- ABOUT THE APP -->
+    <section class="about-app" id="app">
+
+      <p class="eyebrow">ABOUT DAYMARK</p>
+
+      <h2>A simpler way to get things done.</h2>
+
+      <p class="section-description">
+        Daymark is a minimal daily to-do list designed
+        to help you stay organized without distractions.
+        Add your tasks, track your progress, and focus
+        on what matters most.
+      </p>
+
+      <div class="feature-grid">
+
+        <article class="feature-card">
+          <span class="feature-number">01</span>
+          <h3>Capture quickly</h3>
+          <p>
+            Add your tasks whenever an idea comes to mind.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-number">02</span>
+          <h3>Stay organized</h3>
+          <p>
+            Edit, complete, or delete tasks with ease.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-number">03</span>
+          <h3>Make progress</h3>
+          <p>
+            Check off completed tasks and celebrate
+            your small achievements.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ABOUT THE AUTHOR -->
+    <section class="about-author" id="author">
+
+      <p class="eyebrow">ABOUT THE AUTHOR</p>
+
+      <h2>Built with care.</h2>
+
+      <p>
+        Hi, I'm Avleen, a Computer Science student
+        passionate about web development and
+        building simple, useful applications.
+      </p>
+
+      <p>
+        Daymark is a project created using HTML,
+        CSS, and JavaScript to explore frontend
+        development and interactive user interfaces.
+      </p>
+
+      <a
+        href="https://github.com/avleenkaur7"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="author-link"
+      >
+        Visit my GitHub ↗
+      </a>
+
+    </section>
+
+  </main>
+
+  <script type="module" src="./script.js"></script>
+
+</body>
+</html>
