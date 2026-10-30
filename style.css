@@ -178,9 +178,9 @@ h1 {
 
 #category {
     width: 100%;
-    max-width: 260px;
-    margin-bottom: 12px;
-    padding: 13px 16px;
+    max-width: 660px;
+    margin-bottom: 8px;
+    padding: 13px 20px;
 
     color: var(--text);
     background: white;
@@ -317,13 +317,76 @@ h1 {
 ========================= */
 
 .category-img {
-    width: 35px;
-    height: 35px;
+    width: 45%;
+    aspect-ratio: 16 / 10;
     flex-shrink: 0;
 
-    object-fit: contain;
-    vertical-align: middle;
-    margin-right: 8px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin: 0;
+}
+
+/* CATEGORY BUTTONS */
+.category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 14px;
+    border-radius: 14px;
+}
+
+.cat-btn {
+    padding: 12px 20px;
+
+    color: var(--muted);
+    background: white;
+    border: 1px solid #dce8f0;
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cat-btn:hover {
+    background: var(--blue-light);
+}
+
+.cat-btn.active {
+    color: var(--blue-dark);
+    background: var(--blue-light);
+    border-color: var(--blue-dark);
+    font-weight: 600;
+}
+
+/* shown when the user forgot to pick a category */
+.category-buttons.need {
+    outline: 2px solid #c45f69;
+    outline-offset: 4px;
+}
+
+/* EDIT MODE */
+.task.editing {
+    background: var(--blue-light);
+    border-radius: 14px;
+}
+
+#cancel {
+    padding: 14px 18px;
+    color: var(--muted);
+    background: transparent;
+    border: none;
+    border-radius: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#cancel:hover {
+    background: #f1f4f7;
+}
+
+#cancel[hidden] {
+    display: none;
 }
 
 /* =========================
@@ -610,6 +673,15 @@ h1 {
         padding: 7px;
         font-size: 12px;
     }
+    .category-img {
+    width: 45%;
+    aspect-ratio: 16 / 10;
+    flex-shrink: 0;
+
+    object-fit: cover;
+    border-radius: 14px;
+    margin: 0;
+}
 }
 
 @media (max-width: 380px) {

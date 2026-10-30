@@ -36,15 +36,14 @@
       <p class="subtitle">
         One task at a time. One step forward.
       </p>
-      <select id="category" required>
-    <option value="">Select category</option>
-    <option value="fitness">Fitness</option>
-    <option value="study">Study</option>
-    <option value="shopping">Shopping</option>
-    <option value="work">Work</option>
-    <option value="self-care">Self-care</option>
-    <option value="meals">Meals</option>
-</select>
+     <div id="category" class="category-buttons">
+  <button type="button" class="cat-btn" data-category="fitness">Fitness</button>
+  <button type="button" class="cat-btn" data-category="study">Study</button>
+  <button type="button" class="cat-btn" data-category="shopping">Shopping</button>
+  <button type="button" class="cat-btn" data-category="work">Work</button>
+  <button type="button" class="cat-btn" data-category="self-care">Self-care</button>
+  <button type="button" class="cat-btn" data-category="meals">Meals</button>
+</div>
       <form id="form">
         <label class="sr-only" for="input">New task</label>
 
@@ -56,6 +55,8 @@
         />
 
         <button type="submit">+ Add task</button>
+        <button type="button" id="cancel" hidden>Cancel
+        </button>
       </form>
 
       <ul id="list" class="list"></ul>
